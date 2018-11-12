@@ -5,6 +5,7 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import android.support.v7.widget.RecyclerView
 import net.ukr.vlsv.hw03_chat.adapter.RecyclerAdapter
+import net.ukr.vlsv.hw03_chat.adapter.SpacesItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         myDataset.add(arrayOf(viewType, ""))
         chat_rv.adapter.notifyDataSetChanged()
+        chat_rv.addItemDecoration(SpacesItemDecoration(15))
 
         ok_btn.setOnClickListener() {
             val viewType: String
